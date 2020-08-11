@@ -4,7 +4,7 @@ This repository contains the initial stage of a student project to build a clone
 
 ---
 
-## this a prueba in master
+## This is an Update master
 
 <center><h3>Repository Contents by Project Task</h3> </center>
 
