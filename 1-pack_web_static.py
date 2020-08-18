@@ -13,8 +13,8 @@ def do_pack():
     if path.isdir("versions") is False:
         local("mkdir -p versions")
     t = datetime.now()
-    # name.strftime("%Y%m%d%H%M%S")
-    archive_name = "web_static_{}{}{}{}{}{}.tgz".format(
+    name = t.strftime("%Y%m%d%H%M%S")
+    archive_name = "web_static_{}".format(name)
         t.year, t.month, t.day, t.hour, t.minute, t.second)
     local("tar -czvf versions/{} web_static".format(archive_name))
     return "versions/" + archive_name
