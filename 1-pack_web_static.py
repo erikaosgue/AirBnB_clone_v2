@@ -10,11 +10,14 @@ from os import path
 
 def do_pack():
     # create the folder versions if not exists
-    if path.isdir("versions") is False:
-        local("mkdir -p versions")
-    t = datetime.now()
-    name = t.strftime("%Y%m%d%H%M%S")
-    archive_name = "web_static_{}".format(name)
-        t.year, t.month, t.day, t.hour, t.minute, t.second)
-    local("tar -czvf versions/{} web_static".format(archive_name))
-    return "versions/" + archive_name
+    try:
+        if path.isdir("versions") is False:
+            local("mkdir -p versions")
+        t = datetime.now()
+        name = t.strftime("%Y%m%d%H%M%S")
+        archive_name = "web_static_{}".format(name)
+            t.year, t.month, t.day, t.hour, t.minute, t.second)
+        local("tar -czvf versions/{} web_static".format(archive_name))
+        return "versions/" + archive_name
+    except:
+        return None
