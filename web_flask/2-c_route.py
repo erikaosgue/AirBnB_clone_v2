@@ -7,7 +7,7 @@
 (replace underscore _ symbols with a space )
 Usage: python3 -m web_flask.2-c_route """
 
-from flask import Flask, escape
+from flask import Flask
 
 app = Flask(__name__)
 
@@ -28,7 +28,7 @@ def hbnb():
 def C_text(text):
     """ display “C <text>” followed by the value of the text variable"""
     new_text = text.replace("_", " ")
-    return f"C {escape(new_text)}"
+    return "C {}".format(new_text)
 
 
 if __name__ == "__main__":
