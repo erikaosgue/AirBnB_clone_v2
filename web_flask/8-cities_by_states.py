@@ -2,19 +2,7 @@
 """ starts a Flask web application:
 listening on 0.0.0.0, port 5000
 Routes:
-* /states_list: display a HTML page: (inside the tag BODY)
-   ** H1 tag: “States”
-   ** UL tag: with the list of all State objects present in DBStorage sorted
-   by name (A->Z)
-    ***LI tag: description of one State: <state.id>: <B><state.name></B> + UL
-    tag: with the list of City objects linked to the State sorted by name(A-Z)
-        ** LI tag: description of one City: <city.id>: <B><city.name></B>
-Terminal 1:
-Usage: HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd
-HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db
-python3 -m web_flask.8-cities_by_states
-Terminal 2:
-curl 0.0.0.0:5000/cities_by_states ; echo ""
+ /states_list: display a HTML page: (inside the tag BODY)
 """
 
 from flask import Flask
