@@ -18,7 +18,7 @@
                     <h4>&nbsp;</h4>
                     <ul class="popover">
                     {% for state in dictionary.values()|sort(attribute="name") %}
-                        <LI><H2><B>{{ state.name }}:</B></H2>
+                        <LI><H2><B>{{ state.name }}</B></H2>
                             <UL>
                             {% for city in state.cities|sort(attribute="name") %}
                                 <LI><H4>{{ city.name }}</h4></LI>
