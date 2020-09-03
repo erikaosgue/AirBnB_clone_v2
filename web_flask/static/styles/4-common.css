@@ -4,6 +4,7 @@ body {
     padding: 0;
     font-size: 14px;
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-bottom: 70px;
 }
 .container {
     width: 1000px;

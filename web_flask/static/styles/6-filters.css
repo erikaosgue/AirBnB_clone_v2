@@ -86,7 +86,6 @@ ul {
     padding-left: 50px;
 }
 
-
 /*- ----------------------*/
 .filters .popover::-webkit-scrollbar {
     display: none;
@@ -108,10 +107,12 @@ ul {
     min-height: 300px;
     overflow-y: scroll;
     display: none;
+    z-index: 1010;
     
 }
 .filters .locations:hover .popover, .filters .amenities:hover .popover{
     display: block;
+
 }
 /* remove the dots from the list calling the classname */
 .filters .popover li {
