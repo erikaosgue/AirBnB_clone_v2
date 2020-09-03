@@ -18,16 +18,9 @@ app = Flask(__name__)
 @app.route('/hbnb', strict_slashes=False)
 def hbnb_filters():
     """ display a HTML page"""
-    # place_dict = {}
     dictionary = storage.all(State)
     amenities_dict = storage.all(Amenity)
     place_dict = storage.all(Place)
-    i = 0
-    # for key, value in place_di.items():
-    #     i += 1
-    #     place_dict[key] = value
-    #     if i == 3:
-    #         break
     return render_template('100-hbnb.html', dictionary=dictionary,
                            amenities_dict=amenities_dict, place_dict=place_dict)
 
